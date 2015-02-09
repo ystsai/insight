@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>PERMstats - Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">PERMstats</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="input">Dashboard</a></li>
+<li><a target="_blank" href="https://docs.google.com/presentation/d/1Hxt-AkOtcUnLjYKecDHxrlXQJps1KKOPlNZGaDzbbx4/pub?start=false&loop=false&delayms=3000">Slides</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<br><br>
+<br><br>
+  <div class="container">
+    <div class="starter-template">
+        <h2>PERM statisics</h2>
+        <p>Shows statistics of applicants from companies located in Santa Clara, California.</p>
+    </div>
+
+    <div class = "container">
+
+      <form  action="/output" method="GET">
+        <div class="form-group">
+          <label for="ID">Company:</label>
+          <select class="form-control" id="company" name='company'>
+<option>AB OVO, INC.</option>
+<option>ACCEL NORTH AMERICA INC</option>
+<option>ACNOVATE CORPORATION</option>
+<option>ACROPETAL, INC.</option>
+<option>AERIA GAMES & ENTERTAINMENT, INC.</option>
+<option>AERIS COMMUNICATIONS, INC.</option>
+<option>AFFYMETRIX, INC</option>
+<option>AGILENT TECHNOLOGIES, INC.</option>
+<option>ALLIANCE OCCUPATIONAL MEDICINE</option>
+<option>ALPHA NET CONSULTING LLC.</option>
+<option>ALPINE ELECTRONICS OF SILICON VALLEY, INC.</option>
+<option>AMLOGIC INC.</option>
+<option>AMTEX ENTERPRISES INC</option>
+<option>APPLIED LASER SOLUTIONS, INC.</option>
+<option>APPLIED MATERIALS, INC.</option>
+<option>ARISTA NETWORKS, INC.</option>
+<option>ATOPTECH, INC.</option>
+<option>BHATIA & CO, INC</option>
+<option>BIG SWITCH NETWORKS</option>
+<option>BLUE STAR INFOTECH AMERICA</option>
+<option>BODHTREE SOLUTIONS, INC</option>
+<option>CALSOFT LABS INC</option>
+<option>CENTRIFY CORPORATION</option>
+<option>CHANGYOU.COM (US) LLC</option>
+<option>CHEGG, INC.</option>
+<option>CIGNEX DATAMATICS, INC.</option>
+<option>CLIQR TECHNOLOGIES, INC.</option>
+<option>COHERENT, INC</option>
+<option>CONTINUUM ELECTRO-OPTICS, INC.</option>
+<option>COOKING PAPA, INC.</option>
+<option>CRYSTALFISH INC</option>
+<option>DIGIA USA INC</option>
+<option>DROISYS INC</option>
+<option>DYNAMIC ACCESS SYSTEMS, INC</option>
+<option>ELECTRONIC COOLING SOLUTIONS, INC.</option>
+<option>EMBRANE</option>
+<option>ENSPHERE SOLUTIONS, INC.</option>
+<option>EVANS ANALYTICAL GROUP</option>
+<option>FILEMAKER INC.</option>
+<option>FOVEON, INC.</option>
+<option>FUJIFILM DIMATIX, INC.</option>
+<option>GIGAMON, INC.</option>
+<option>GLOBALFOUNDRIES U.S. INC.</option>
+<option>GS SOFT INC</option>
+<option>HALOSYS TECHNOLOGIES</option>
+<option>HITACHI DATA SYSTEMS CORPORATION</option>
+<option>IB TECHNOLOGY SOLUTIONS, INC.</option>
+<option>INFOBLOX</option>
+<option>INFOOBJECTS, INC.</option>
+<option>INFOSTRETCH CORPORATION</option>
+<option>INFOTECH SPECTRUM INC</option>
+<option>INNOVATE SOLUTIONS INC</option>
+<option>INTEGRAL SOLUTIONS INTL</option>
+<option>INTEL CORPORATION</option>
+<option>INTEL FEDERAL, INC.</option>
+<option>INTEL MEDIA, INC.</option>
+<option>INTEL MOBILE COMMUNICATIONS, INC.</option>
+<option>INVENTEC APPLIANCES CORPORATION USA, INC.</option>
+<option>IRISLOGIC INC</option>
+<option>ITALENT CORPORATION</option>
+<option>KNO INC.</option>
+<option>KRYPT INC</option>
+<option>LEEYO SOFTWARE, INC.</option>
+<option>LUMASENSE TECHNOLOGIES, INC.</option>
+<option>LUMENDATA, INC.</option>
+<option>MALHAR, INC.</option>
+<option>MARSTEK SOLUTIONS, LLC</option>
+<option>MARVELL SEMICONDUCTOR INC</option>
+<option>MASTERMIND EDUCATIONAL SERVICES, INC.</option>
+<option>MATSUMOTO & ASSOCIATES</option>
+<option>MCAFEE INC.</option>
+<option>MICROPOINT BIOSCIENCE,INC.</option>
+<option>MIL AL MISSION IN NORTHERN CALIFORNIA</option>
+<option>MIPS TECHNOLOGIES</option>
+<option>NANGATE</option>
+<option>NANOSEMANTICS INC.</option>
+<option>NANYA TECHNOLOGY CORPORATION USA</option>
+<option>NEXENTA SYSTEMS, INC</option>
+<option>NEXTBIO</option>
+<option>NOR1</option>
+<option>NSIGHT, INC</option>
+<option>NVIDIA CORPORATION</option>
+<option>O2MICRO INC.</option>
+<option>OMEGA SOLUTIONS INC</option>
+<option>OMNIVISION TECHNOLOGIES, INC.</option>
+<option>PACTRON/HJPC CORPORATION</option>
+<option>PALO ALTO NETWORKS, INC.</option>
+<option>PELICAN IMAGING CORPORATION</option>
+<option>PERSISTENT SYSTEMS INC.</option>
+<option>PERSISTENT TELECOM SOLUTIONS INC.</option>
+<option>PROCESS GLOBAL INC</option>
+<option>PROCESSWEAVER, INC.</option>
+<option>QUANTA LABORATORIES</option>
+<option>ROVI CORPORATION</option>
+<option>SAVARI INC</option>
+<option>SERENE CORPORATION</option>
+<option>SERVICENOW, INC.</option>
+<option>SILVACO INC.</option>
+<option>SILVER PEAK</option>
+<option>SOFT MACHINES, INC.</option>
+<option>STMICROELECTRONICS, INC.</option>
+<option>SURIYA SYSTEMS INC</option>
+<option>TAVANT TECHNOLOGIES INC.</option>
+<option>TELLUS SOLUTIONS INC.</option>
+<option>TENSILICA, INC.</option>
+<option>TESSOLVEDTS INC.</option>
+<option>THATONE COMPANY</option>
+<option>THE LAXMI GROUP INC.</option>
+<option>TRANSLATTICE INC.</option>
+<option>TRANSNATIVE ASSOCIATES, INC</option>
+<option>TRIANZ</option>
+<option>U.S.INTERACTIVE CORP</option>
+<option>V2SOLUTIONS INC.</option>
+<option>VERSA NETWORKS, INC</option>
+<option>WAHA MONTESSORI SCHOOL</option>
+<option>WINCERE INC.</option>
+<option>YV TECHNOLOGIES INC</option>
+<option>ZENVERGE, INC.</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-default btn-lg">Show</button>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  </div> <!-- /.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+
+

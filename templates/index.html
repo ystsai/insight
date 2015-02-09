@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>PERMstats - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">PERMstats</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="input">Dashboard</a></li>
+<li><a target="_blank" href="https://docs.google.com/presentation/d/1Hxt-AkOtcUnLjYKecDHxrlXQJps1KKOPlNZGaDzbbx4/pub?start=false&loop=false&delayms=3000">Slides</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<br><br>
+<br><br>
+    <div class="container"> 
+    <div class="starter-template">
+    <p align="justify">As part of an Insight Data Science Fellow project in conjunction with Teleborder, the acceptance and denial data of employment-based permanent residency labor applications were examined. Publicly available data from <a href="http://www.foreignlaborcert.doleta.gov/performancedata.cfm">the Department of Labor</a> were downloaded.</p>
+    <p align="justify">Before obtaning permanent resident status, most foreign workers obtain H-1B visas. H-1B visas are valid for three years, and are renewable for another three years. The foreign worker must obtain permanent residence to continue working after the H-1B visa. Permanent residence means the person is allowed to work and live in the United States.</p>
+    <h3>Application numbers over time</h3>
+    <p align="justify">Looking at the total number of applications submitted from 2000 to 2014, there is a strong decrease in applications in 2005. <a href="http://www.foreignlaborcert.doleta.gov/pdf/OFLC_Report_v11_8-23-07.pdf">A 2006 report from the Department of Labor</a> mentions a change in the labor certification process in applications. The drop in applications between 2007 to 2009 was attributed to the economy, <a href="http://www.foreignlaborcert.doleta.gov/pdf/2009_Annual_Report.pdf">according a 2009 report released by the Department of Labor</a>.</p>
+    <p align="justify">The percentage of approved cases also decreased siginificantly between 2002 and 2007. It is not known if this is due to the lack of data or a true decline in acceptance rate. As the data cannot be trusted, the reasonable data that can be used is from 2007 onward.</p>
+    <p align="center"><img src="/static/img/PERMtotal.png" width="45%" height="45%" class="media-object" alt="Total number of PERM applications over 2000-2014">
+    <img src="/static/img/PERMappr.png" width="45%" height="45%" class="media-object" alt="Percentage of approved cases from 2000-2014"></p>
+    <p align="justify">As H-1B visas are valid for three years with the possibility of renewal up to six years, a comparison of the applications over time may show similar increase and decreases.</p>
+    <p align="justify">By overlaying the graph of PERM applicants over time with the number of H-1B visas over time, the total number of applications for PERM does increase as with the increase of H-1B applications. Although H-1B visas renewals are possible, it can be expected that the PERM applications follow the rate of H-1B applications.</p>
+    <p align="center"><img src="/static/img/PERMH1B.png" width="45%" height="45%" class="media-object" alt="PERM and H-1B applications over time overlayed">
+    <img src="/static/img/PERMH1Bback3.png" width="45%" height="45%" class="media-object" alt="PERM and H-1B applications over time overlayed with PERM timeline moved back 3 years"></p>
+    <h3>Certified and certified-expired results</h3>
+    <p align="justify">PERM results are divided into four categories: Certified, Certified-Expired, Withdrawn, and Denied. The status of Certified and Certified-Expired both mean approval. However, Certified-Expired indicates that an I-140 form was not filed within 180 days of PERM approval.</p>
+    <p align="center"><img src="/static/img/PERMcert11.png" width="45%" height="45%" class="media-object" alt="Pie chart of 2011 application results">
+    <img src="/static/img/PERMcert12.png" width="45%" height="45%" class="media-object" alt="Pie chart of 2012 application results"></p>
+    <p align="center"><img src="/static/img/PERMcert13.png" width="45%" height="45%" class="media-object" alt="Pie chart of 2013 application results">
+    <img src="/static/img/PERMcert14.png" width="45%" height="45%" class="media-object" class="Pie chart of 2014 application results"></p>
+    <p align="justify">As the accpetance vs. denial rates were being explored, Certified and Certified-Expired results were considered a successful result. However, one interesting year for further analysis would be in 2012. Only one applicant was Certified, while the majority of applicants had a status of Certified-Expired. A subsequent question to consider is the difference between the two groups, and what percentage of applicants with Certified-Expired results successfully obtain a green card. From here on, Accepted refers to both Certified and Certified-Expired restults, and Denied refers to Denied results.</p>
+    <p align="justify">Individual factors that may play a role in determining the success of PERM applications are country of origin, economic sector, employer, and job state.</p>
+    <h3>Applicants from Santa Clara, California</h3> 
+    <p align="justify">The 2014 application results from companies in Santa Clara, California were explored. An expectation in different businesses is that small and medium size companies may have a more difficult time obtaining permanent residence for their employees compared to large companies. From the 2014 data, using a calculating the Z-score comparing the success rate of applicants of small companies to applicants of large companies, the difference had a significance slightly less than 90%.</p>
+    <p align="center"><img src="/static/img/2014bar.png" width="45%"></p>
+    <p align="justify">As the cutoff to determining significance was very close to 90%, data from a span of 2012-2014 was analyzed. With this data, the difference bewteen the success rate between large and small businesses was 90% significant. Therefore, small businesses do worse than large businesses in obtaining permanent residence for their H-1B carrying employees.</p>
+    <p align="center"><img src="/static/img/2012-14.png" width="45%"></p>
+    <p align="justify">Although small businesses do worse than large businesses in obtaining permanent residence for their employees, Teleborder provides the appropriate software and legal expertise for the application process. Small businesses are encouraged to seek guidance from Teleborder for their employment-based visa needs.</p>  
+    </div>
+    </div>
+
+
+<br><br>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
